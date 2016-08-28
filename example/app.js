@@ -1,26 +1,24 @@
 const diamond = require('../lib/diamond');
 const morgan = require('morgan');
 
-
-diamond.use(function(req, res, next) {
-  console.log('Middleware 1');
+// Midleware
+diamond.use((req, res, next) => {
+  console.log('Middleware 1 called');
   next();
 });
+diamond.use(morgan('dev'));
 
-diamond.use(function(req, res, next) {
-  console.log('Middleware 2');
-  next();
+// Set controllers directory (only for controller routes)
+diamond.setControllersDir('example/controllers');
+
+// Controller routes
+diamond.route('GET', '/', 'MainController@index');
+diamond.route('GET', '/home', 'MainController@home');
+
+// Straight routes
+diamond.route('GET', '/admin', (req, res) => {
+  res.write('Hello admin!');
 });
 
-diamond.use(morgan('combined'));
-
-diamond.route('GET', '/', (req, res) => {
-  const name = req.query.name;
-  res.write(`Hello ${name}`);
-});
-
-diamond.route('POST', '/', (req, res) => {
-  res.write('Home post');
-});
-
+// Start server
 diamond.start(8080);
