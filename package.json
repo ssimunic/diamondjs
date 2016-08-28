@@ -30,6 +30,7 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
+    "morgan": "^1.7.0",
     "nodemon": "^1.10.2"
   }
 }
