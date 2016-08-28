@@ -1,6 +1,9 @@
-<center><img src="http://i.imgur.com/x9gdlaL.png" alt="Diamond JS" style="height: 125px;"/></center>
-<br>
-<center>Minimalist web framework for Node.js</center>
+<p align="center">
+    <img src="http://i.imgur.com/x9gdlaL.png" alt="Diamond JS" width="100"/>
+</p>
+<p align="center">
+    Minimalist web framework for Node.js
+</p>
 
 # Installation
 
