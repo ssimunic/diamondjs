@@ -1,29 +1,35 @@
-const diamond = require('../lib/diamond');
+const Diamond = require('../lib/diamond');
 const morgan = require('morgan');
 
+const server = new Diamond();
+
 // Midleware
-diamond.use((req, res, next) => {
+server.use((req, res, next) => {
   console.log('Middleware 1 called');
   next();
 });
-diamond.use(morgan('dev'));
+server.use(morgan('dev'));
+
+// View engine setup
+server.setViewsDir('example/views');
+server.useViewEngine('pug');
 
 // Set controllers directory (only for controller routes)
-diamond.setControllersDir('example/controllers');
+server.setControllersDir('example/controllers');
 
 // Controller routes
-diamond.route('GET', '/', 'MainController@index');
-diamond.route('GET', '/home', 'MainController@home');
+server.route('GET', '/', 'MainController@index');
+server.route('GET', '/home', 'MainController@home');
 
 // Straight routes
-diamond.route('GET', '/news', (req, res) => {
-  res.write('Hello news!');
+server.route('GET', '/news', (req, res) => {
+  res.render('news');
 });
 
 // Short way
-diamond.get('/admin', (req, res) => {
+server.get('/admin', (req, res) => {
   res.write('Hello admin!');
 });
 
 // Start server
-diamond.start(8080);
+server.start(8080);

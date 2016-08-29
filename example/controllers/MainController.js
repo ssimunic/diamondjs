@@ -9,4 +9,3 @@ exports.home = (req, res) => {
 exports.admin = (req, res) => {
   res.write('Admin');
 };
-

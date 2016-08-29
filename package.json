@@ -2,7 +2,7 @@
   "name": "diamondjs",
   "version": "0.0.1",
   "description": "Minimalistic web framework for Node.js",
-  "main": "diamond.js",
+  "main": "lib/diamond.js",
   "scripts": {
     "start": "nodemon example/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/ssimunic/diamondjs.git"
   },
-  "author": "Silvio Simunic <silvio.simunic@gmail.com>",
+  "author": "Silvio Simunic <silvio.simunic@gmail.com> (http://silviosimunic.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ssimunic/diamondjs/issues"
@@ -31,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.2.0",
     "morgan": "^1.7.0",
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "pug": "^2.0.0-beta6"
   }
 }
