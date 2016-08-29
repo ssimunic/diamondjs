@@ -63,6 +63,8 @@ server.use(morgan('dev'));
 
 ## Routing
 
+Supported methods are  ```POST GET PUT PATCH DELETE```
+
 ### Basic
 
 ```js
@@ -82,6 +84,7 @@ server.get('/admin', (req, res) => {
 ### Controller route
 
 ```app.js```
+
 ```js
 // Set controllers directory (optional, default is controllers)
 // server.setControllersDir('example/controllers');
@@ -91,6 +94,7 @@ server.route('GET', '/home', 'MainController@home');
 ```
 
 ```controllers/MainController.js```
+
 ```js
 exports.index = (req, res) => {
   res.write('Index');
