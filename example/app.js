@@ -16,7 +16,12 @@ diamond.route('GET', '/', 'MainController@index');
 diamond.route('GET', '/home', 'MainController@home');
 
 // Straight routes
-diamond.route('GET', '/admin', (req, res) => {
+diamond.route('GET', '/news', (req, res) => {
+  res.write('Hello news!');
+});
+
+// Short way
+diamond.get('/admin', (req, res) => {
   res.write('Hello admin!');
 });
 
