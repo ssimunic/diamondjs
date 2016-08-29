@@ -71,6 +71,11 @@ Supported methods are  ```POST GET PUT PATCH DELETE```
 server.route('GET', '/news', (req, res) => {
   res.write('Hello news!');
 });
+
+server.route('POST', ...);
+server.route('PUT', ...);
+server.route('PATCH', ...);
+server.route('DELETE', ...);
 ```
 
 ### Basic short
@@ -79,6 +84,11 @@ server.route('GET', '/news', (req, res) => {
 server.get('/admin', (req, res) => {
   res.write('Hello admin!');
 });
+
+server.post(...);
+server.put(...);
+server.patch(...);
+server.delete(...);
 ```
 
 ### Controller route
