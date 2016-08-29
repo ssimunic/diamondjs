@@ -83,7 +83,7 @@ server.get('/admin', (req, res) => {
 
 ### Controller route
 
-***app.js***
+**app.js**
 
 ```js
 // Set controllers directory (optional, default is controllers)
@@ -93,7 +93,7 @@ server.route('GET', '/', 'MainController@index');
 server.route('GET', '/home', 'MainController@home');
 ```
 
-***controllers/MainController.js***
+**controllers/MainController.js**
 
 ```js
 exports.index = (req, res) => {
