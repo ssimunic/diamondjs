@@ -48,7 +48,7 @@ const port = 8080;
 server.start(port);
 ```
 
-## Midleware
+## Middleware
 
 ### Custom
 
