@@ -1,6 +1,6 @@
 {
   "name": "diamondjs",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Minimalistic web framework for Node.js",
   "main": "lib/diamond.js",
   "scripts": {
